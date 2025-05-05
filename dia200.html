@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primera pagina web</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<!-- Define el color del fondo -->
+<body class="bg-stone-400">
+<!-- la clase del header define el color del fondo del titulo y del texto -->
+    <header class="bg-teal-900 text-white p-4">
+        <!-- aca definimos los detalles, el tamaño maximo y minimo de aumento, la unicacion, y la separacion entre textos-->
+        <nav class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="#">TO-DO app</a>
+            <!-- aca se define el ancho del espacio del titulo -->
+            <ul class="flex space-x-4">
+                <!-- aca cambia el color del texto de los titulos siguientes al pasar el mouse por encima-->
+                <li><a class="hover:text-red-500" href="#">Mis tareas</a></li>
+                <li><a class="hover:text-red-500" href="#">Sobre Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Aca inicia el MAIN/Pantalla principal -->
+    <main></main>
+    <!-- Aca definimos el elemento del HIJO 1 -->
+        <h1>Gestion de tareas</h1>
+
+        <!-- Hijo 2 -->
+         <div class="flex">
+
+            <!-- Hijo 1 del div -->
+             <!-- aca colocamos la url/ruta que vaa a procesar los datos -->
+             <form class="flex-1 bg-white p-4 rounded shadow" action="aca va la url" method="se define el metodo de envio al backend">
+
+                <!-- aca se agrega el nombre de la tarea y el margen entre el titulo y el bloque-->
+                <div class="mb-4">
+                    <!-- aca detallamos el color del texto y margen -->
+                    <label class="block text-blue-500 mb-1 font-bold" for="titulo">Titulo de la tarea</label>
+                    <!-- input para que el ususario incluya sus datos con las especificaciones de lo que va a ir como ejemplo dentro del bloque, con las especificacionde del tamaño del bloque y el tipo de borde -->
+                    <input type="text" id="titulo" name="titulo" placeholder="Aca podes agregar el titulo de la tarea" class="w-full p-2 border rounded">
+                </div>
+
+                <!-- da la posibilidad que el ususario incluya la fecha -->
+                <div class="mb-4">
+                    <label class="block text-blue-500 mb-1 font-bold" for="fecha">Vencimiento de la tarea</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                </div>
+
+                <!-- espacio para que incluya la descripcion y pone para 3 filas para responder -->
+                <div class="mb-4">
+                    <label class="block text-blue-500 mb-1 font-bold" for="descripcion">Descripcion de la tarea</label>
+                    <textarea name="descripcion" id="descripcion" placeholder="Describe tu tarea" rows="3" class="w-full p-2 border rounded" required></textarea>
+                </div>
+
+                <!-- espacio para incluir el email -->
+                <div class="mb-4">
+                    <label class="block text-blue-500 mb-1 font-bold" for="email">Email</label>
+                    <input type="email" name="email" placeholder="correo@correo.com" class="w-full p-2 border rounded" required>
+                </div>
+                
+                <!-- boton de enviado  con las especificaciones del color de boton, tamaño, forma y cambio de color al posarse encima del boton-->
+                <button class="bg-lime-500 px-4 py-2 rounded shadow text-white hover:bg-lime-950" type="submit">
+                    Agregar tarea
+                </button>
+
+            </form>
+
+            <!-- Hijo 2 del div -->
+            <section></section>
+         </div>
+</body>
+</html>
